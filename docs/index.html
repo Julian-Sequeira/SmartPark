@@ -5,7 +5,8 @@
     <script></script>
   </head>
   <body>
-    <h1><span id="gate">Closed</span></h1>
+    <!-- <h1><span id="gate">Closed</span></h1> -->
+    <p id="gate"><img src="sad-pepe.jpg" height="400px"></p>
     <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -22,9 +23,9 @@ var starCountRef = firebase.database().ref('vehicles');
 starCountRef.on('value', function(snapshot) {
   // updateStarCount(postElement, snapshot.val());
 
-    document.getElementById('gate').innerHTML = "Open"
+    document.getElementById('gate').innerHTML = '<img src="happy-pepe.jpg" height=400px>'
     setTimeout(function closeGate() {
-      document.getElementById('gate').innerHTML = "Closed"
+      document.getElementById('gate').innerHTML = '<img src="sad-pepe.jpg" height=400px>'
     }, 10000);
 });
 </script>
